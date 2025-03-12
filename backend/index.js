@@ -16,7 +16,15 @@ app.use(cors({
 
 app.use(express.json())
 app.use(cookieParser())
+
+app.get('/', (req, res) => {
+    res.send('Hello from Express on Vercel!');
+});
+
+
 app.use("/api",router)
+
+
 
 const PORT = process.env.PORT || 9001
 
