@@ -8,7 +8,7 @@ const router = require('./routes')
 
 const app = express()
 app.use(cors({
-    origin: "https://e-commerce-website-one-jet.vercel.app", // Removes trailing slash
+    origin : process.env.FRONTEND_URL, // Removes trailing slash
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
